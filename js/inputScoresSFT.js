@@ -1,1 +1,0 @@
-<button onclick="myFunction()">Try itd</button>

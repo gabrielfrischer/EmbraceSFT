@@ -28,6 +28,6 @@ function calculateScore(){
    var sixth_number = parseInt(document.getElementById("inputSFT6").value);
    var result = first_number + second_number + third_number + fourth_number + fifth_number + sixth_number;
      
-    document.getElementById("sftReport").innerHTML = result;
+    document.getElementById("sftReport").innerHTML = "Score: " + result;
    //document.getElementById("txtresult").value = result;
             }

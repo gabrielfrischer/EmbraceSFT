@@ -154,6 +154,27 @@ body {
 	text-align: center;
 }
 
+#stepSFTstep {
+	position:relative;
+	width: 100%;
+	font-size:12px;
+	text-align: center;
+}
+
+#stepSFTt_start {
+	position:relative;
+	width: 100%;
+	font-size:12px;
+	text-align: center;
+}
+
+#stepSFTt_stop {
+	position:relative;
+	width: 100%;
+	font-size:12px;
+	text-align: center;
+}
+
 @-webkit-keyframes dash {
   from {
     stroke-dashoffset: 628;

@@ -1,7 +1,7 @@
       
 var path = document.querySelector('.timer circle');
 var length = path.getTotalLength();
-var seconds = 30;
+var seconds = 30.00;
 var step = 0;
 var t_start = 1;
 var t_stop = 1;
@@ -11,7 +11,7 @@ var myTimer;
 console.log(length);
 
 function buildTimerDisplay(){
-  if (seconds < 0){
+  if (seconds < 0.00){
     secString = '0' + seconds;
   } else {
     secString = seconds;
@@ -26,8 +26,8 @@ function countdown() {
   //seconds = 30
   console.log('countdown', seconds );
   seconds--;
-  if (seconds < 0 ){
-    seconds = 0;
+  if (seconds < 0.00 ){
+    seconds = 0.00;
     console.log('clearing timeout')
     reset();
   }
@@ -55,7 +55,7 @@ function reset(){
   $(".timer circle").removeClass("animation");
   $('.playPause i').removeClass('fa-pause');
   $('.playPause i').addClass('fa-play');
-  seconds = 30;
+  seconds = 30.00;
 }
 
 function reset120(){
@@ -70,7 +70,7 @@ function reset120(){
   $(".timer circle").removeClass("animation");
   $('.playPause i').removeClass('fa-pause');
   $('.playPause i').addClass('fa-play');
-  seconds = 120;
+  seconds = 120.00;
 }
 
 function reset60(){
@@ -93,6 +93,7 @@ $('.playPause').click(function(){
   if (playing){
     console.log('Starting the step!!!');
 
+
     t_start = Math.floor(Date.now());
     countdown();
     $('.playPause i').removeClass('fa-play');
@@ -113,6 +114,9 @@ $('.playPause').click(function(){
     t_stop = Math.floor(Date.now());
     step++;
     console.log(step,t_start,t_stop);
+    document.getElementById("timeStampSFTstep").innerHTML = step;
+    document.getElementById("timeStampSFTt_start").innerHTML = t_start;
+    document.getElementById("timeStampSFTt_stop").innerHTML = t_stop;
     console.log('pause');
     pauseAll();
   playing = true;

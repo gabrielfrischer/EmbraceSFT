@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Embrace</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -77,13 +77,28 @@
   <div class="row">
   <div class="col s6"> 
 <div class="right">
-  <button  class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
+  <button onclick="confirmStartStep1();" class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
  </div>
  </div>
 
   <div class="col s6"> 
 <div class="left">
-  <button onclick="reset();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset 30s</span></button>
+  <button onclick="reset(); confirmResetStep1();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset 30s</span></button>
+ </div>
+ </div>
+
+ </div>
+  <div class="row">
+  <div class="col s6"> 
+<div class="right">
+  <p id="confirmStartStep1"></p>
+ </div>
+ </div>
+
+  <div class="col s6"> 
+<div class="left">
+<p id="confirmResetStep1"></p>
+  </div>
  </div>
  </div>
 
@@ -422,7 +437,7 @@
      <div class="container">
 
      <div class="row">
-     <
+     
      <div class="col s12 center">
      <h5>Prescribed Exercises</h5>
     <div class="chips chips-initial" label="add tags"></div>
@@ -455,6 +470,7 @@
   <script src="js/sftClock1.js"></script>
   <script src="js/calculateScoresSFT.js"></script>
   <script src="js/prescribeExcercises.js"></script>
+  <script src="js/confirmClicksTimer.js"></script>
 
   </body>
 </html>
